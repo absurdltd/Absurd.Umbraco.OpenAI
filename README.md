@@ -18,4 +18,4 @@ This package utilizes the following open source project: https://www.nuget.org/p
 
 
 ## Demo
-![alt text](https://github.com/absurdltd/Absurd.Umbraco.OpenAI/raw/master/readme/readmedemo.gif "Demo of the content app")
+![alt text](https://raw.githubusercontent.com/absurdltd/Absurd.Umbraco.OpenAI/master/readme/readmedemo.gif "Demo of the content app")
