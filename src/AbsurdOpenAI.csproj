@@ -8,7 +8,7 @@
     <PackageId>Absurd.Umbraco.OpenAI</PackageId>
     <Title>Absurd.Umbraco.OpenAI</Title>
     <Description>OpenAI Content App for Umbraco 11</Description>
-    <PackageTags>umbraco plugin package</PackageTags>
+    <PackageTags>umbraco plugin package umbraco-marketplace</PackageTags>
     <Authors>Absurd</Authors>
   </PropertyGroup>
 
