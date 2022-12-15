@@ -1,6 +1,6 @@
 ﻿{
   "name": "AbsurdOpenAI",
-  "version": "1.0.15",
+  "version": "1.0.17",
   "allowPackageTelemetry": true,
   "contentApps": [
     {

@@ -8,7 +8,7 @@
     <Description>OpenAI Rich Text Editor Package for Umbraco 11</Description>
     <PackageTags>umbraco plugin package</PackageTags>
     <Authors>Absurd</Authors>
-	  <Version>1.0.15</Version>
+	  <Version>1.0.17</Version>
   </PropertyGroup>
 
   <ItemGroup>

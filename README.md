@@ -15,3 +15,7 @@ This is a content app for Umbraco version 11 which gives content editors ability
 
 ## Dependencies
 This package utilizes the following open source project: https://www.nuget.org/packages/OpenAI
+
+
+## Demo
+![alt text](https://github.com/absurdltd/Absurd.Umbraco.OpenAI/raw/master/readme/readmedemo.gif "Demo of the content app")
