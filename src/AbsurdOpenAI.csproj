@@ -3,12 +3,13 @@
     <TargetFramework>net7.0</TargetFramework>
     <ContentTargetFolders>.</ContentTargetFolders>
     <Product>AbsurdOpenAI</Product>
-    <PackageId>AbsurdOpenAI</PackageId>
-    <Title>AbsurdOpenAI</Title>
-    <Description>OpenAI Rich Text Editor Package for Umbraco 11</Description>
+    <RepositoryType>git</RepositoryType>
+	  <RepositoryUrl>https://github.com/absurdltd/Absurd.Umbraco.OpenAI</RepositoryUrl>
+    <PackageId>Absurd.Umbraco.OpenAI</PackageId>
+    <Title>Absurd.Umbraco.OpenAI</Title>
+    <Description>OpenAI Content App for Umbraco 11</Description>
     <PackageTags>umbraco plugin package</PackageTags>
     <Authors>Absurd</Authors>
-	  <Version>1.0.17</Version>
   </PropertyGroup>
 
   <ItemGroup>
