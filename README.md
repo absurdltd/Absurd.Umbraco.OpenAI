@@ -4,7 +4,7 @@ This is a content app for Umbraco version 11 which gives content editors ability
 ## Usage
 1. Head over to https://openai.com/api/ to create an account and follow steps to get an API key.
 2. Install this package via nuGet. https://www.nuget.org/packages/Absurd.Umbraco.OpenAI/
-3. Once installed add config values in appSettings
+3. Once installed add the following config values in appSettings
 ```json
   "OpenAI": {
     "ApiKey": "YOUR_APIKEY"
