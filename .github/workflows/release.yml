@@ -18,6 +18,6 @@ jobs:
     - name: Pack
       run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
     - name: Push
-      run: dotnet nuget push Absurd.Umbraco.OpenAI.${VERSION}.nupkg --source https://nuget.pkg.github.com/absurdltd/index.json --api-key ${NUGET_API_KEY}
+      run: dotnet nuget push Absurd.Umbraco.OpenAI.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_API_KEY}
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
