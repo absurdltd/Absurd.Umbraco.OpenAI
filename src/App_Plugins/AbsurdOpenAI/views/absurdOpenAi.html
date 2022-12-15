@@ -1,0 +1,32 @@
+﻿<div ng-controller="Absurd.OpenAI as vm">
+    <umb-box>
+        <umb-box-header title="OpenAI Content Buddy"></umb-box-header>
+        <umb-box-content>
+            <p>Enter your subject text, i.e. how is software prototyping useful.</p>
+            <ng-form name="text">
+                <textarea ng-model="vm.value"
+                          name="textarea"
+                          rows="5"
+                          class="umb-property-editor umb-textarea textstring"
+                          val-server="value"
+                          ng-trim="false"
+                          ng-required">
+                </textarea>
+            </ng-form>
+            <div>
+                <uui-button ng-click="vm.search()" look="primary" ng-show="!vm.processing">Process</uui-button>
+                <p ng-show="vm.processing">Processing, this may take a few seconds due to OpenAi Api</p>
+            </div>
+            <hr />
+            <div ng-show="vm.processing">
+                <uui-loader></uui-loader>
+            </div>
+            <div class="content-view" ng-show="!vm.processing">
+                <p>{{vm.resp}}</p>
+                <a class="content-view-copy" ng-click="vm.copyClipboard()" ng-show="vm.resp">
+                    {{ vm.clipboardSuccess ? 'Copied' : 'Copy to clipboard'}}
+                </a>
+            </div>
+        </umb-box-content>
+    </umb-box>
+</div>

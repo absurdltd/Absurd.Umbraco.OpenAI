@@ -1,0 +1,23 @@
+﻿{
+  "name": "AbsurdOpenAI",
+  "version": "1.0.15",
+  "allowPackageTelemetry": true,
+  "contentApps": [
+    {
+      "name": "Absurd OpenAI",
+      "alias": "absurdOpenAI",
+      "weight": 0,
+      "icon": "icon-book-alt-2",
+      "view": "~/App_Plugins/AbsurdOpenAI/views/absurdOpenAi.html",
+      "show": [
+        "+content/*" // show app for all content types
+      ]
+    }
+  ],
+  "javascript": [
+    "~/App_Plugins/AbsurdOpenAI/js/absurdOpenAi.controller.js"
+  ],
+  "css": [
+    "~/App_Plugins/AbsurdOpenAI/css/absurdOpenAi.css"
+  ]
+}

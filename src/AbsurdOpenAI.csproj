@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ContentTargetFolders>.</ContentTargetFolders>
+    <Product>AbsurdOpenAI</Product>
+    <PackageId>AbsurdOpenAI</PackageId>
+    <Title>AbsurdOpenAI</Title>
+    <Description>OpenAI Rich Text Editor Package for Umbraco 11</Description>
+    <PackageTags>umbraco plugin package</PackageTags>
+    <Authors>Absurd</Authors>
+	  <Version>1.0.15</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenAI" Version="1.2.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="11.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Plugins\AbsurdOpenAI\**" ExcludeFromSingleFile="true" CopyToPublishDirectory="Always" />
+    <None Include="buildTransitive\**" Pack="true" PackagePath="buildTransitive" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AbsurdOpenAI\**" />
+    <EmbeddedResource Remove="AbsurdOpenAI\**" />
+    <None Remove="AbsurdOpenAI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="App_Plugins\AbsurdOpenAI\views\absurdOpenAi.html" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,21 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AbsurdOpenAIContentFilesPath>$(MSBuildThisFileDirectory)..\App_Plugins\AbsurdOpenAI\**\*.*</AbsurdOpenAIContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyAbsurdOpenAIAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <AbsurdOpenAIContentFiles Include="$(AbsurdOpenAIContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying AbsurdOpenAI files: $(AbsurdOpenAIContentFilesPath) - #@(AbsurdOpenAIContentFiles->Count()) files" Importance="high" />
+    <Copy SourceFiles="@(AbsurdOpenAIContentFiles)" DestinationFiles="@(AbsurdOpenAIContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\AbsurdOpenAI\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearAbsurdOpenAIAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <AbsurdOpenAIDir Include="$(MSBuildProjectDirectory)\App_Plugins\AbsurdOpenAI\" />
+    </ItemGroup>
+    <Message Text="Clear old AbsurdOpenAI data" Importance="high" />
+    <RemoveDir Directories="@(AbsurdOpenAIDir)" />
+  </Target>
+</Project>
