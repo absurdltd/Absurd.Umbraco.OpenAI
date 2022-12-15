@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using OpenAI_API;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Umbraco.Cms.Web.BackOffice.Controllers;
 using Umbraco.Cms.Web.Common.Attributes;
@@ -28,9 +29,10 @@ namespace AbsurdOpenAI.Controllers
                 FrequencyPenalty = 0,
                 PresencePenalty = 0
             };
-            var completion = await _client.Completions.CreateCompletionAsync(request);
+            var completion = await _client.Completions.CreateAndFormatCompletion(request);
 
-            return new JsonResult(completion.ToString());
+            string result = Regex.Replace(completion.ToString(), @"\r\n?|\n", "<br>");
+            return new JsonResult(result);
         }
     }
 }

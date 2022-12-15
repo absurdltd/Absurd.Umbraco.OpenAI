@@ -22,7 +22,7 @@
                 <uui-loader></uui-loader>
             </div>
             <div class="content-view" ng-show="!vm.processing">
-                <p>{{vm.resp}}</p>
+                <p ng-bind-html="vm.resp"></p>
                 <a class="content-view-copy" ng-click="vm.copyClipboard()" ng-show="vm.resp">
                     {{ vm.clipboardSuccess ? 'Copied' : 'Copy to clipboard'}}
                 </a>

@@ -11,7 +11,7 @@
             vm.processing = true;
             $http.get("/umbraco/backoffice/OpenAI/Completion/GetText?text=" + vm.value)
                 .then(function success(resp) {
-                    vm.resp = resp;
+                    vm.resp = resp.data;
                     vm.processing = false;
                 }, function error(resp) {
                     vm.resp = resp.data.ExceptionMessage;
