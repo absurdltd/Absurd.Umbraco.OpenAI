@@ -1,6 +1,8 @@
 # Umbraco Open AI Content App
 This is a content app for Umbraco version 11 which gives content editors ability to use OpenAI directly inside Umbraco whilst editing content.
 
+The content app uses OpenAI completions API, this API finishes a subject, you should phrase your subjects similar to "Software prototyping is useful because" to get the most out of the response.
+
 ## Usage
 1. Head over to https://openai.com/api/ to create an account and follow steps to get an API key.
 2. Install this package via nuGet. https://www.nuget.org/packages/Absurd.Umbraco.OpenAI/
